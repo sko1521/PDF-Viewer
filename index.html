@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PDF Reader</title>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	
+<style>
+	html, body, object
+          {
+             height:100%;width:100%;
+          }
+	button{
+		width: 77px;
+    height: 26px;
+    background: steelblue;
+    color: #fff;
+    font-size: 16px;
+	}
+</style>
+</head>
+<body>
+	<h3>Work in Desktop only.</h3>
+		<button>Preview</button>
+	<object data="./pdf/9780717152780.pdf" type="application/pdf"  style="display:none;">
+	   	<p><b>Example fallback content</b>: This browser does not support PDFs. Please download the PDF to view it: <a href="./pdf/9780717152780.pdf" target="_blank" download>Download PDF</a>.</p>
+	</object>
+	
+	<script>
+		$(document).ready(function(){
+			$('button').on('click',function(){
+				$('object').css('display','block');
+			});
+		})
+	</script>
+
+
+</body>
+</html>
